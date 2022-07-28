@@ -1,5 +1,5 @@
-import { AppBar, Box, Grid, Toolbar, Typography } from '@mui/material'
-import React from 'react'
+import { AppBar, Avatar, Box, Grid, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import { styled } from '@mui/system';
 import { mobile } from './../responsive';
 import IconButton from '@mui/material/IconButton';
@@ -41,28 +41,52 @@ const handleLogout = () => {
     console.log("LogOut");
 }
 
+const handleClose = () => {
+    console.log("CLose")
+}
+
 
 const Navbar = () => {
+
+    const [open , setOpen] = useState(false)
+    
+
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
                 <AppBar position="static" >
-                    <Toolbar style={{display: "flex" , justifyContent: "space-between"}}>
-                        
-                            <IconButton size="large"
-                                edge="start"
-                                color="inherit"
-                                aria-label="menu"
-                                sx={{ mr: 2 }}>
-                                <MenuIcon />
-                            </IconButton>
-                            <Logo variant='h6' component="h6" >Courier Speed</Logo>
-                            <ShortLogo variant='h6' component="h6" >CS</ShortLogo>
-                            <AccountCircleOutlinedIcon />
-                                
-                            
+                    <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
+
+                        <IconButton size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{ mr: 2 }}>
+                            <MenuIcon />
+                        </IconButton>
+                        <Logo variant='h6' component="h6" >Courier Speed</Logo>
+                        <ShortLogo variant='h6' component="h6" >CS</ShortLogo>
+                        <Avatar sx={{ border: "1px solid white" }} width="30px" height="30px" src='https://iconarchive.com/download/i18310/iconshock/cms/user.ico' onClick={ e => setOpen(true)} />
 
                     </Toolbar>
+                    <Menu
+                        id="demo-positioned-menu"
+                        aria-labelledby="demo-positioned-button"
+                        open={open}
+                        onClose={ e => setOpen(false)}
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                    >
+                        <MenuItem onClick={handleClose}>Profile</MenuItem>
+                        <MenuItem onClick={handleClose}>My account</MenuItem>
+                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    </Menu>
                 </AppBar>
 
             </Box>
