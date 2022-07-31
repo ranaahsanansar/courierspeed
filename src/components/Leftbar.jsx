@@ -13,7 +13,7 @@ const Leftbar = () => {
         <Box flex={1} bgcolor="#1976d2b0" p={2} sx={{ display: {xs: "none" , sm:"block"} , height: "100vh"}}>
         <List>
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton> 
               <ListItemIcon>
                 <PeopleAltIcon />
               </ListItemIcon>

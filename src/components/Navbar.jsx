@@ -13,7 +13,7 @@ import { Button } from '@mui/material';
 const Logo = styled(Typography)`
     display: block;
     /* Responsive for Mobile Screen  */
-    ${mobile({
+    ${mobile({ 
     display: "none"
 })}
 `
