@@ -10,7 +10,7 @@ const MainLayout = () => {
         <Navbar />
         <Stack direction="row" justifyContent="space-between">
           <Leftbar />
-          <Box flex={4} bgcolor="yellow" p={2}>
+          <Box flex={4} p={2}>
             <Outlet />
           </Box>
         </Stack>
