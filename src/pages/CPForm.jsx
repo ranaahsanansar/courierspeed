@@ -24,6 +24,12 @@ const SpecialistServicesDiv = styled.div`
     display: ${props => props.num === 2 ? "block" : "none"} ;
 `
 
+const SpecialServiceInnerDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`
+
 const BillingAddressDiv = styled.div`
     display: ${props => props.num === 3 ? "block" : "none"} ;
 `
@@ -124,7 +130,7 @@ const CPForm = () => {
                 <Box sx={{ marginTop: "5px" }}>
                     <ContactDetailsDiv num={formNo} >
                         <TitleBox>
-                            <Title>Ahsan</Title>
+                            <Title>Contact Details</Title>
                         </TitleBox>
 
                         <InnerFormBox >
@@ -340,9 +346,9 @@ const CPForm = () => {
                             <Title>Special Services </Title>
                         </TitleBox>
                         <InnerFormBox  >
-                            <FormGroup>
-
-                                <FormControlLabel control={<Checkbox name="chilled" />} label="Chilled" />
+                            <FormGroup >
+                                <SpecialServiceInnerDiv>
+                                  <FormControlLabel control={<Checkbox name="chilled" />} label="Chilled" />
 
                                 <FormControlLabel control={<Checkbox name="cargo" />} label="Cargo Operative" />
 
@@ -360,7 +366,9 @@ const CPForm = () => {
 
                                 <FormControlLabel control={<Checkbox name="man-2" />} label="2 Man" />
 
-                                <FormControlLabel control={<Checkbox name="other" />} label="Other" />
+                                <FormControlLabel control={<Checkbox name="other" />} label="Other" />  
+                                </SpecialServiceInnerDiv>
+                                
 
 
                             </FormGroup>
@@ -458,8 +466,9 @@ const CPForm = () => {
                             <InputBox sx={{width: "80%"}}>
                                 <TextareaAutosize
                                     aria-label="minimum height"
-                                    minRows={3}
+                                    minRows={9}
                                     placeholder="Enter About"
+                                    style={{ width: "40vw" }}
                                 />
                             </InputBox>
 

@@ -3,6 +3,8 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./MainLayout";
+import Document from "./pages/Document";
+import Drivers from "./pages/Drivers";
 import Home from "./pages/Home";
 
 // const Container = styled(Button)`
@@ -17,11 +19,15 @@ function App() {
         <Routes>
           <Route path="/"  element={<MainLayout />} >
             <Route index element={<Home />} />
+            <Route path="driver" element={<Drivers />} />
+            <Route path="document" element={<Document />} />
           </Route>
         </Routes>
       </BrowserRouter>
     </>
   );
 }
+
+// #1976d2b0 Primary color Light 
 
 export default App;

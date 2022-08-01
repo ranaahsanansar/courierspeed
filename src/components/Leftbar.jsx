@@ -6,14 +6,16 @@ import TextSnippetIcon from '@mui/icons-material/TextSnippet'; // Documents Icon
 import { styled } from '@mui/system';
 
 import ModeNightIcon from '@mui/icons-material/ModeNight'; // Dark Mode Icon
+import { NavLink } from 'react-router-dom';
 
 const Leftbar = () => {
   return (
     <>
+
         <Box flex={1} bgcolor="#1976d2b0" p={2} sx={{ display: {xs: "none" , sm:"block"} , height: "100vh"}}>
         <List>
           <ListItem disablePadding>
-            <ListItemButton> 
+            <ListItemButton component={NavLink} to="/"> 
               <ListItemIcon>
                 <PeopleAltIcon />
               </ListItemIcon>
@@ -22,7 +24,7 @@ const Leftbar = () => {
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton component={NavLink} to="/driver" >
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
@@ -31,7 +33,7 @@ const Leftbar = () => {
           </ListItem>
 
           <ListItem disablePadding>
-            <ListItemButton>
+            <ListItemButton component={NavLink} to="/document">
               <ListItemIcon>
                 <TextSnippetIcon />
               </ListItemIcon>
