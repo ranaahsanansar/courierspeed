@@ -1,11 +1,13 @@
 // import { Button } from "@mui/material";
 // import { styled } from "@mui/system";
 
+import { createTheme, ThemeProvider } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./MainLayout";
 import Document from "./pages/Document";
 import Drivers from "./pages/Drivers";
 import Home from "./pages/Home";
+
 
 // const Container = styled(Button)`
 // color: red;
@@ -13,8 +15,10 @@ import Home from "./pages/Home";
 // `
 
 function App() {
+
   return (
     <>
+    
       <BrowserRouter>
         <Routes>
           <Route path="/"  element={<MainLayout />} >
@@ -24,6 +28,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      
     </>
   );
 }

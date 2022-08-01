@@ -115,7 +115,7 @@ const CPForm = () => {
 
     return (
         <>
-            <Box sx={{ width: '100%' }}>
+            <Box sx={{ width: '100%' , marginTop: "5px" }}>
                 <Stepper activeStep={formNo} alternativeLabel sx={{ display: "flex", flexWrap: "wrap" }}>
                     {steps.map((formNo) => (
                         <Step key={formNo}>
