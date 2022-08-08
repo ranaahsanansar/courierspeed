@@ -12,6 +12,7 @@ import { Button } from '@mui/material';
 // NavBar Logo 
 const Logo = styled(Typography)`
     display: block;
+    color: #2c7be5;
     /* Responsive for Mobile Screen  */
     ${mobile({ 
     display: "none"

@@ -18,8 +18,8 @@ const Leftbar = ({ currentMode , setMode }) => {
   return (
     <>
 
-        <LeftBox flex={1} bgcolor={currentMode === "light" ? "#1976d2b0" : "Black"} p={2} sx={{ display: {xs: "none" , sm:"block"} , height: "100vh"}}>
-        <List>
+        <LeftBox flex={1} bgcolor={currentMode === "light" ? "#edf2f9" : "#0b1727"} p={2} sx={{ display: {xs: "none" , sm:"block" , borderRight: "0.5px solid grey"} , height: "100vh"}}>
+        <List sx={{color: "#2c7be5"}}>
           <ListItem disablePadding>
             <ListItemButton component={NavLink} to="/"> 
               <ListItemIcon>

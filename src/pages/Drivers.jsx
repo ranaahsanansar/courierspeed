@@ -7,7 +7,7 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 const MainContainer = styled.div`
     max-width: 85vw;
-    overflow-x: scroll;
+    overflow: scroll;
 `
 
 const TitleContainer = styled.div`

@@ -6,6 +6,7 @@ import { Box, Stack, ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material';
 import { useState } from 'react';
 import Footer from './components/Footer';
+import { amber, deepOrange, grey } from '@mui/material/colors';
 
 const MainLayout = () => {
 
@@ -13,7 +14,30 @@ const MainLayout = () => {
 
   const darkTheme = createTheme ({
     palette:{
-      mode: mode
+      mode,
+      ...(mode === 'light'
+      ? {
+          // palette values for light mode
+          primary: {main: '#edf2f9'} ,
+          divider: '#edf2f9',
+          text: {
+            primary: grey[900],
+            secondary: grey[800],
+          },
+        }
+      : {
+          // palette values for dark mode
+          primary: {main: '#fff'},
+          divider: '#0b1727',
+          background: {
+            default: '#0b1727',
+            paper: '#0b1727',
+          },
+          text: {
+            primary: '#fff',
+            secondary: '#fff',
+          },
+        }),
     }
   });
 
@@ -21,7 +45,7 @@ const MainLayout = () => {
   return (
     <>
     <ThemeProvider theme={darkTheme}>
-      <Box bgcolor={"background.defult"} color={"text.primary"} >
+      <Box bgcolor="#edf2f9" color={"text.primary"} >
         <Navbar />
         <Stack direction="row" justifyContent="space-between">
           <Leftbar setMode={setMode} currentMode={mode} />
